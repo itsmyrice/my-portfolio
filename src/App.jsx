@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import styled from "styled-components"
+import Projects from "./components/Projects";
 
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
   <Hero />
   <About />
   <Skills />
+  <Projects />
 </StyledDiv>
   )
 };

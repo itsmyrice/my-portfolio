@@ -1,88 +1,81 @@
-import React from 'react'
-import html from "../assets/data/html.png"
-import css from "../assets/data/css.png"
-import javascript from "../assets/data/javascript.png"
-import react from "../assets/data/react.png"
-import nextjs from "../assets/data/nextjs.png"
-import github from "../assets/data/github.png"
-import git from "../assets/data/git.png"
-import styledcomponents from "../assets/data/styled-components.png"
-import vercel from "../assets/data/vercel.png"
-import mongodb from "../assets/data/mongodb.png"
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+import html5 from "../assets/data/html.png";
+import css from "../assets/data/css.png";
+import javascript from "../assets/data/javascript.png";
+import react from "../assets/data/react.png";
+import nextjs from "../assets/data/nextjs.png";
+import github from "../assets/data/github.png";
+import git from "../assets/data/git.png";
+import styledComponents from "../assets/data/styled-components.png";
+import vercel from "../assets/data/vercel.png";
+import mongodb from "../assets/data/mongodb.png";
 
+/* Problem: The path to the imageSrc is not working! */
 
-export default function Skills() {
-  return (
-    <StyledContainer id="skills">
+export const skillsData = [
+  {
+      name: "HTML5",
+      imageSrc: html5,
+   },
+   {
+      name: "CSS",
+      imageSrc: css,
+   },
+   {
+      name: "JavaScript",
+      imageSrc: javascript,
+   },
+   {
+      name: "React",
+      imageSrc: react,
+   },
+   {
+      name: "Next.js",
+      imageSrc: nextjs,
+   },
+   {
+      name: "GitHub",
+      imageSrc: github,
+   },
+   {
+      name: "Git",
+      imageSrc: git,
+   },
+   {
+      name: "Styled-components",
+      imageSrc: styledComponents,
+   },
+   {
+      name: "Vercel",
+      imageSrc: vercel,
+   },
+   {
+      name: "MongoDB",
+      imageSrc: mongodb,
+   }
+];
+
+console.log(skillsData)
+export default function Try() {
+   return (
+      <StyledContainer id="skills">
         <StyledTitle>Skills</StyledTitle>
         <StyledContent>
-           <StyledSkills>
-            <StyledSkillList>
-            <StyledImageContainer>
-             <StyledImage src={html} alt="HTML" />
-             </StyledImageContainer>
-             <StyledText>HTML</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={css} alt="CSS" />
-             </StyledImageContainer>
-             <StyledText>CSS</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={javascript} alt="JavaScript" />
-             </StyledImageContainer>
-             <StyledText>JavaScript</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={react} alt="React" />
-             </StyledImageContainer>
-             <StyledText>React</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={nextjs} alt="Nextjs" />
-             </StyledImageContainer>
-             <StyledText>Nextjs</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={github} alt="GitHub" />
-             </StyledImageContainer>
-             <StyledText>GitHub</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={git} alt="Git" />
-             </StyledImageContainer>
-             <StyledText>Git</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={styledcomponents} alt="styled-components" />
-             </StyledImageContainer>
-             <StyledText>Styled-components</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={vercel} alt="Vercel" />
-             </StyledImageContainer>
-             <StyledText>Vercel</StyledText>
-             </StyledSkillList>
-             <StyledSkillList>
-             <StyledImageContainer>
-             <StyledImage src={mongodb} alt="MongoDB" />
-             </StyledImageContainer>
-             <StyledText>MongoDB</StyledText>
-             </StyledSkillList>
-             </StyledSkills>
+          <StyledSkills>
+            {skillsData.map((skill, name) => (
+              <StyledSkillList key={name}>
+                <StyledImageContainer>
+                  <StyledImage src={skill.imageSrc} alt={skill.name} />
+                </StyledImageContainer>
+                <StyledText>{skill.name}</StyledText>
+              </StyledSkillList>
+            ))}
+          </StyledSkills>
         </StyledContent>
-    </StyledContainer>
-  )
-}
+      </StyledContainer>
+    );
+};
 
 const StyledContainer = styled.section`
 color: var(--text-color);
@@ -93,9 +86,9 @@ const StyledTitle = styled.h2`
 color: var(--text-color);
 font-size: 2.2rem;
 font-weight: 700;
+margin: 8rem 10% 2rem;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
-margin: 8rem 10% 2rem;
 
 `;
 
@@ -121,7 +114,6 @@ row-gap: 1rem;
     width: 100%;
     flex-direction: row;
     justify-content: center;
-
 }
 `;
 
@@ -134,13 +126,13 @@ align-items: center;
 
 const StyledImageContainer = styled.div`
 background-color: var(--light-dark-color);
+border-radius: 100%;
 width: 10rem;
 height: 10rem;
-border-radius: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
 margin: 1rem;
+display: flex;
+justify-content: center;
+align-items: center;
 `;
 
 const StyledImage = styled.img`
@@ -149,6 +141,6 @@ height: 50%;
 `;
 
 const StyledText = styled.p`
-font-size: 1.5rem;
 font-family: var(--font-roboto);
+font-size: 1.5rem;
 `;

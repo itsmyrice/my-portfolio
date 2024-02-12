@@ -1,6 +1,6 @@
-import React from 'react'
-import hero from "../assets/hero/hero-image.png"
-import styled from 'styled-components'
+import React from "react";
+import hero from "../assets/hero/hero-image.png";
+import styled from "styled-components";
 
 export default function Hero() {
   return (
