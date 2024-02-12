@@ -9,7 +9,10 @@ export default createGlobalStyle`
 }
 
 :root {
-    /* Colors */
+    /* Fonts */
+    --font-roboto: "Roboto";
+
+    /* Default Colors */
     --text-color: #fff;
     --background-color: #3D2B1F;
     --dark-color: #635147;
@@ -18,12 +21,21 @@ export default createGlobalStyle`
     --secondary-color: #FBCEB1;
     --third-color: #FF9966;
     --fourth-color: #C19A6B;
-    /* Fonts */
-    --font-roboto: "Roboto";
+    --contact-me-color: #6B4423;
+
+    /* Toggle light color */
+    --toggle-background-color: #FFE4E1;
+    --toggle-contact-color: #79443B;
+    --toggle-text-color: #3B3C36;
+    --toggle2-text-color: rgb(59, 60, 54)
+    --about-border-color: rgba(233, 116, 81, 0.4);
+    --about2-border-color: rgba(149, 69, 53, 0.4);
+    --about-light-hover-color: rgb(255, 228, 225)
+    --about-dark-hover-color: rgb(121, 68, 59)
+    --blur-color: rgba(233, 116, 81, 0.2);
 }
 
 html {
     scroll-behavior: smooth;
 }
  `;
-

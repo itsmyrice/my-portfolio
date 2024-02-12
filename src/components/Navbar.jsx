@@ -14,16 +14,16 @@ export default function Navbar() {
           <StyledMenuIcon src={menuDisplay ? menuClose : menu} alt={menuDisplay ? "Close icon" : "Menu icon"} onClick={() => setMenuDisplay(!menuDisplay)} />
            <StyledMenuItems style={{ display: menuDisplay ? "flex" : "none"}} onClick={() => setMenuDisplay(false)}>
           <StyledListItems>
-            <StyledTitle href="/About">About</StyledTitle>
+            <StyledTitle href="#about">About</StyledTitle>
           </StyledListItems>
           <StyledListItems>
-            <StyledTitle href="/education">Education</StyledTitle>
+            <StyledTitle href="#skills">Skills</StyledTitle>
           </StyledListItems>
           <StyledListItems>
-            <StyledTitle href="/projects">Projects</StyledTitle>
+            <StyledTitle href="#projects">Projects</StyledTitle>
           </StyledListItems>
           <StyledListItems>
-            <StyledTitle href="/contact">Contact</StyledTitle>
+            <StyledTitle href="#contact">Contact</StyledTitle>
           </StyledListItems>
           </StyledMenuItems>
       </StyledMenu>
@@ -97,6 +97,7 @@ gap: 2.5rem;
   align-items: center;
   gap: 0.8rem;
   padding: 1.3rem 1.8rem;
+  z-index: 2;
 }
 `;
 

@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 export default function About() {
   return (
-    <StyledContainer>
+    <StyledContainer id="about">
         <StyledTitle>About</StyledTitle>
         <StyledContent>
             <StyledGirlImage src={girl} alt="Girl with a laptop" />
@@ -32,7 +32,7 @@ export default function About() {
 };
 
 const StyledContainer = styled.section`
-background-color: rgba(107, 68, 35, 0.6);
+background-color: rgba(107, 68, 35, 0.8);
 border-radius: 1rem;
 margin-top: 7.5rem;
 margin: 0 10%;
@@ -59,7 +59,7 @@ align-items: center;
 
 const StyledTitle = styled.h2`
 color: var(--text-color);
-font-size: 2rem;
+font-size: 2.2rem;
 font-weight: 700;
 margin-bottom: 2rem;
 letter-spacing: 0.1rem;
