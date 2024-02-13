@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { contacsData } from "../data/contactsData";
 import emailjs from '@emailjs/browser';
 
+
 export default function Contact() {
     const form = useRef();
 
@@ -83,7 +84,8 @@ color: #1A1110;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 0;
+    font-size: 1rem;
 }
 `;
 
@@ -105,6 +107,11 @@ text-transform: uppercase;
 const StyledDescription = styled.p`
 margin: 1rem 0;
 font-size: 1.1rem;
+
+@media screen and (max-width: 768px) {
+    font-size: 1rem;
+}
+
 `;
 
 const StyledCvLink = styled.a`
@@ -121,6 +128,7 @@ display: flex;
 flex-direction: column;
 gap: 1rem;
 }
+
 `;
     
 const StyledContact = styled.li`
@@ -150,12 +158,13 @@ justify-content: space-between;
 gap: 1rem;
 
 @media screen and (max-width: 768px) {
-    width: 100%;
+    width: 80%;
+    font-size: 1rem;
 }
 `;
 
 const StyledInput = styled.input`
-width: 80%;
+width: 90%;
 height: 2.2rem;
 border: none;
 border-bottom: 0.2rem solid #635147;
@@ -179,7 +188,7 @@ box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.10);
 
 const StyledTextarea = styled.textarea`
 resize: none;
-width: 80%;
+width: 90%;
 height: 7rem;
 border: none;
 border-bottom: 0.2rem solid #635147;
@@ -202,8 +211,8 @@ box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.10);
 `;
 
 const StyledButton = styled.button`
-width: 80%;
-height: 2.5rem;
+width: 90%;
+height: 2.7rem;
 background-color: #1A1110;
 border: none;
 border-radius: 1rem;

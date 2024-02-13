@@ -70,7 +70,6 @@ display: flex;
 }
 `;
 
-
 const StyledMenuIcon = styled.img`
 cursor: pointer;
 margin-top: 0.5rem;

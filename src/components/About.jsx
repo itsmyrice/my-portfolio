@@ -4,6 +4,7 @@ import frontend from "../assets/about/frontend.png";
 import backend from "../assets/about/backend.png";
 import styled from "styled-components";
 
+
 export default function About() {
   return (
     <StyledContainer id="about">
@@ -26,7 +27,7 @@ export default function About() {
                 </div>
             </StyledListItems>
         </StyledAboutItems>
-        </StyledContent>
+        </StyledContent>      
     </StyledContainer>
   )
 };
@@ -117,3 +118,4 @@ font-weight: 600;
 const StyledDescription = styled.p`
 font-size: 1.3rem;
 `;
+
