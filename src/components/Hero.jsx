@@ -8,7 +8,7 @@ export default function Hero() {
         <StyledContent>
             <StyledTitle>Hi, I'm Glory Ann</StyledTitle>
             <StyledDescription>I have completed my training as a Full Stack Developer at neuefische GmbH. Throughout this journey in web development, I acquired proficiency in HTML, CSS, JavaScript, and various web development frameworks, including React and Next.js.</StyledDescription>
-           <StyledContact href="gaconwi@googlemail.com">Contact Me</StyledContact>
+           <StyledContact href="#contact">Contact Me</StyledContact>
         </StyledContent>
         <StyledHeroImage src={hero} alt="Hero image" />
         <StyledBackgroundTop />
@@ -75,6 +75,11 @@ margin-bottom: 4rem;
 font-size: 1.5rem;
 font-weight: 600;
 text-decoration: none;
+
+&:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.40);
+  } 
 `;
 
 const StyledHeroImage = styled.img`
@@ -116,8 +121,8 @@ height: 50vw;
 min-width: 7rem;
 min-height: 7rem;
 position: absolute;
-top: -6rem;
-left: -10vw;
+top: -5rem;
+left: -11vw;
 filter: blur(10rem);
 z-index: 0;
 `;
@@ -131,7 +136,7 @@ min-width: 7rem;
 min-height: 7rem;
 position: absolute;
 top: -6rem;
-right: -10vw;
+right: -12vw;
 filter: blur(10rem);
 z-index: 0;
 `;

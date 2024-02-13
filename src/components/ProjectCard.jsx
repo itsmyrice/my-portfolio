@@ -19,7 +19,7 @@ export default function ProjectCard({ project : { title, skills, imageSrc, link 
 }
 
 const StyledContainer = styled.section`
-background: linear-gradient(180deg, #926644 0%, #3D2B1F 120%);
+background: linear-gradient(180deg, #926644 0%, #3D2B1F 110%);
 box-shadow: 0 16px 14px 0 #3D2B1F;
 border-radius: 1rem;
 display: flex;
@@ -73,6 +73,8 @@ width: 100%;
 margin-top: 1rem;
 display: flex;
 justify-content: center;
+
+
 `;
 
 const StyledLink = styled.a`
@@ -83,4 +85,9 @@ text-decoration: none;
 font-size: 1.5rem;
 font-weight: 600;
 padding: 0.3rem 1.4rem;
+
+&:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.30);
+} 
 `;

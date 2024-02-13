@@ -22,9 +22,9 @@ export default function Navbar() {
           <StyledListItems>
             <StyledTitle href="#projects">Projects</StyledTitle>
           </StyledListItems>
-          <StyledListItems>
+          {/* <StyledListItems>
             <StyledTitle href="#contact">Contact</StyledTitle>
-          </StyledListItems>
+          </StyledListItems> */}
           </StyledMenuItems>
       </StyledMenu>
     </StyledNav>

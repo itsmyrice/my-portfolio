@@ -1,62 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import html5 from "../assets/data/html.png";
-import css from "../assets/data/css.png";
-import javascript from "../assets/data/javascript.png";
-import react from "../assets/data/react.png";
-import nextjs from "../assets/data/nextjs.png";
-import github from "../assets/data/github.png";
-import git from "../assets/data/git.png";
-import styledComponents from "../assets/data/styled-components.png";
-import vercel from "../assets/data/vercel.png";
-import mongodb from "../assets/data/mongodb.png";
+import { skillsData } from "../data/skillsData";
 
-/* Problem: The path to the imageSrc is not working! */
-
-export const skillsData = [
-  {
-      name: "HTML5",
-      imageSrc: html5,
-   },
-   {
-      name: "CSS",
-      imageSrc: css,
-   },
-   {
-      name: "JavaScript",
-      imageSrc: javascript,
-   },
-   {
-      name: "React",
-      imageSrc: react,
-   },
-   {
-      name: "Next.js",
-      imageSrc: nextjs,
-   },
-   {
-      name: "GitHub",
-      imageSrc: github,
-   },
-   {
-      name: "Git",
-      imageSrc: git,
-   },
-   {
-      name: "Styled-components",
-      imageSrc: styledComponents,
-   },
-   {
-      name: "Vercel",
-      imageSrc: vercel,
-   },
-   {
-      name: "MongoDB",
-      imageSrc: mongodb,
-   }
-];
-
-console.log(skillsData)
 export default function Try() {
    return (
       <StyledContainer id="skills">
@@ -133,11 +78,16 @@ margin: 1rem;
 display: flex;
 justify-content: center;
 align-items: center;
+transition: filter 100ms;
+&:not(:hover) {
+  filter: brightness(62%);
+}
 `;
 
 const StyledImage = styled.img`
 width: 50%;
 height: 50%;
+&:has(StyledImageContainer:hover)
 `;
 
 const StyledText = styled.p`
