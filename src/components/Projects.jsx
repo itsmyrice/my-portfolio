@@ -28,6 +28,10 @@ font-size: 2.2rem;
 font-weight: 700;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
+
+@media screen and (max-width: 768px) {
+  font-size: 2.2rem;
+ }
 `;
 
 const StyledProjects = styled.div`

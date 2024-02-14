@@ -35,6 +35,10 @@ margin: 8rem 10% 2rem;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
 
+@media screen and (max-width: 768px) {
+  font-size: 2.2rem;
+ }
+
 `;
 
 const StyledContent = styled.div`
@@ -93,4 +97,8 @@ height: 50%;
 const StyledText = styled.p`
 font-family: var(--font-roboto);
 font-size: 1.5rem;
+
+@media screen and (max-width: 768px) {
+  font-size: 1.3rem;
+ }
 `;

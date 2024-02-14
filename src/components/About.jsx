@@ -65,6 +65,10 @@ font-weight: 700;
 margin-bottom: 2rem;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
+
+@media screen and (max-width: 768px) {
+ font-size: 2.2rem;
+}
 `;
 
 const StyledGirlImage = styled.img`
@@ -111,8 +115,13 @@ width: 40%;
 `;
 
 const StyledDeveloperTitle = styled.h3`
-font-size: 1.3rem;
+font-size: 1.6rem;
 font-weight: 600;
+margin-bottom: 1rem;
+
+@media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+   }
 `;
 
 const StyledDescription = styled.p`

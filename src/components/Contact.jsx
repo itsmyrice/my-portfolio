@@ -63,13 +63,12 @@ justify-content: center;
 border-radius: 1rem;
 margin: 10% 10%;
 z-index: 1;
-
-
 `;
 
 const StyledFormWrapper = styled.div`
 width: 80%;
-background-color: #C0C0C0;
+/* background-color: #C0C0C0; */
+background-color: rgba(241, 236, 226, 0.85);
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -78,7 +77,7 @@ border-radius: 1rem;
 box-shadow: 0 2rem 6rem rgba(6, 12, 15, 0.2);
 padding: 4rem;
 column-gap: 2rem;
-color: #1A1110;
+color: var(--footer-background);
 
 @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -102,6 +101,10 @@ font-size: 2.2rem;
 font-weight: 700;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
+
+@media screen and (max-width: 768px) {
+   font-size: 2.2rem;
+}
 `;
 
 const StyledDescription = styled.p`
@@ -115,7 +118,7 @@ font-size: 1.1rem;
 `;
 
 const StyledCvLink = styled.a`
-color: #1A1110;
+color: var(--footer-background);
 font-weight: 600;
 `;
 
@@ -128,7 +131,6 @@ display: flex;
 flex-direction: column;
 gap: 1rem;
 }
-
 `;
     
 const StyledContact = styled.li`
@@ -137,6 +139,8 @@ column-gap: 0.5rem;
 font-size: 1.1rem;
 
 @media screen and (max-width: 768px) {
+    font-size: 1rem;
+
     &:last-child {
     border-bottom: 1px solid #635147;
     padding-bottom: 2rem;
@@ -169,7 +173,7 @@ height: 2.2rem;
 border: none;
 border-bottom: 0.2rem solid #635147;
 font-size: 1rem;
-color: #1A1110;
+color: var(--footer-background);
 background-color: transparent;
 outline: none;
 
@@ -193,7 +197,7 @@ height: 7rem;
 border: none;
 border-bottom: 0.2rem solid #635147;
 font-size: 1rem;
-color: #1A1110;
+color: var(--footer-background);
 background-color: transparent;
 outline: none;
 
@@ -206,18 +210,17 @@ color: #635147;
 &:focus {
 border: none;
 box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.10);
-
 }
 `;
 
 const StyledButton = styled.button`
 width: 90%;
 height: 2.7rem;
-background-color: #1A1110;
+background-color: var(--footer-background);
 border: none;
 border-radius: 1rem;
 font-size: 1rem;
-color: #fff;
+color: var(--text-color);
 text-transform: uppercase;
 cursor: pointer;
 box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.10);

@@ -13,7 +13,8 @@ export default createGlobalStyle`
     --font-roboto: "Roboto";
 
     /* Default Colors */
-    --text-color: #fff;
+    --text-color: #f1ece2;
+    --text-color2: #C0C0C0;
     --background-color: #3D2B1F;
     --dark-color: #635147;
     --light-dark-color: #926644;
@@ -21,8 +22,9 @@ export default createGlobalStyle`
     --secondary-color: #FBCEB1;
     --third-color: #FF9966;
     --fourth-color: #C19A6B;
+    --footer-background: #1A1110;
     --contact-me-color: #6B4423;
-
+    
     /* Toggle light color */
     --toggle-background-color: #FFE4E1;
     --toggle-contact-color: #79443B;
@@ -35,7 +37,8 @@ export default createGlobalStyle`
     --blur-color: rgba(233, 116, 81, 0.2);
 }
 
-html {
+body {
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
  `;

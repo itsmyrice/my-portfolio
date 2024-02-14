@@ -1,107 +1,171 @@
-import React, { useState } from "react";
-import menu from "../assets/navbar/menu.png"
-import menuClose from "../assets/navbar/menu-close.png"
+import React, { useRef } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo/logo.png"
-
+import nameLogo from "../assets/name-logo/name-logo.png"
+import { MdMenu, MdOutlineClose } from "react-icons/md";
 
 export default function Navbar() {
-  const [menuDisplay, setMenuDisplay] = useState(false);
+const navRef = useRef();
+function displayMenu () {
+  navRef.current.classList.toggle("responsive_nav");
+}
   return (
-    <StyledNav>
-      <a href="/"><StyledLogo src={logo} alt="Logo" /></a>
-      <StyledMenu>
-          <StyledMenuIcon src={menuDisplay ? menuClose : menu} alt={menuDisplay ? "Close icon" : "Menu icon"} onClick={() => setMenuDisplay(!menuDisplay)} />
-           <StyledMenuItems style={{ display: menuDisplay ? "flex" : "none"}} onClick={() => setMenuDisplay(false)}>
-          <StyledListItems>
-            <StyledTitle href="#about">About</StyledTitle>
+    
+
+  <StyledNav>
+         <StyledMenuItems ref={navRef}>
+         <StyledListItems>
+          <StyledLink href="/">
+            <img src={nameLogo} alt="Logo" width={85} height={65} />
+            </StyledLink>
           </StyledListItems>
           <StyledListItems>
-            <StyledTitle href="#skills">Skills</StyledTitle>
+            <StyledLink href="#about" className="navLinks">About</StyledLink>
           </StyledListItems>
-          <StyledListItems>
-            <StyledTitle href="#projects">Projects</StyledTitle>
+          <StyledListItems >
+            <StyledLink href="#skills" className="navLinks">Skills</StyledLink>
           </StyledListItems>
-          {/* <StyledListItems>
-            <StyledTitle href="#contact">Contact</StyledTitle>
-          </StyledListItems> */}
+          <StyledListItems children>
+            <StyledLink href="#projects" className="navLinks">Projects</StyledLink>
+          </StyledListItems>
+          <StyledButtonShow onClick={displayMenu} className="navMenu navClose">
+            <MdOutlineClose />
+            </StyledButtonShow>
           </StyledMenuItems>
-      </StyledMenu>
+
+          <StyledButtonShow onClick={displayMenu} className="navMenu">
+          <MdMenu/>
+          </StyledButtonShow>
     </StyledNav>
-  ) 
+
+  )
+
 };
 
+
 const StyledNav = styled.nav`
-padding-top: 1.5rem;
-margin: 0 10%;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: space-between;
-z-index: 2;
+background-color: var(--text-color);
+box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+color: var(--footer-background);
+position: fixed;
+width: 100%;
+height: 3.5rem;
 
-@media screen and (max-width: 768px) {
-  flex-direction: column;
-  align-items: flex-start;
-}
-`;
+z-index: 5;
 
-const StyledLogo = styled.img`
-width: 4.6rem;
-height: 3.8rem;
-`;
-
-const StyledTitle = styled.a`
-color: var(--text-color);
-text-decoration: none;
-font-size: 2rem;
-`;
-
-const StyledMenu = styled.div`
-display: flex;
-
-@media screen and (max-width: 768px) {
-  position: absolute;
-  right: 0;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.7rem;
-  z-index: 3;
-}
-`;
-
-const StyledMenuIcon = styled.img`
-cursor: pointer;
-margin-top: 0.5rem;
-width: 1.8rem;
-height: 1.5rem;
-
- @media screen and (max-width: 768px) {
-  display: block;
-}
 `;
 
 const StyledMenuItems = styled.ul`
 list-style: none;
 display: flex;
-gap: 2.5rem;
+align-items: center;
 
-@media screen and (max-width: 768px) {
-  background: rgb(99, 81, 71);
-  background: linear-gradient(0deg, rgba(99, 81, 71, 0.2) 0%, rgba(99, 81, 71, 1) 150%);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0.6rem;
-  display: none;
+@media only screen and (max-width: 768px) {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60%;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
-  padding: 1.3rem 1.8rem;
-  z-index: 2;
+ gap: 1rem;
+  z-index: 10;
+ background-color: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+transition: 1s;
+transform: translateY(-100vh);
+
+&.responsive_nav {
+  transform: none;
 }
+}
+
 `;
 
 const StyledListItems = styled.li`
-color: var(--text-color);
+padding: 0 2%;
+
+&:first-child {
+  margin-right: auto;
+  margin-left: 2%;
+ height: 2.5rem;
+}
+
+&:first-child:hover {
+  background-color: transparent;
+  filter: hue-rotate(10deg);
+}
+
+@media only screen and (max-width: 768px) {
+display: flex;
+justify-content: center;
+row-gap: 2rem;
+  &:hover {
+    width: 100%;
+    transition: 1s;
+  }
+
+&:first-child {
+justify-content: flex-start;
+margin-left: 0;
+margin-top: 0;
+margin-bottom: 2.5rem;
+height: 2rem;
+}
+}
+`;
+
+const StyledButtonShow = styled.button`
+cursor: pointer;
+background: transparent;
+padding-right: 0.7rem;
+border: none;
+outline: none;
+color: black;
+visibility: hidden;
+opacity: 0;
+font-size: 2.3rem;
+
+
+@media only screen and (max-width: 768px) {
+  &.navMenu {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  padding: 0.7rem;
+}
+
+&.navClose {
+  position: absolute;
+  }
+}
+`;
+
+const StyledLink = styled.a`
 text-decoration: none;
-font-size: 1.2rem;
+color: black;
+font-size: 1.4rem;
+
+&.navLinks:after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 3px;
+   background: var(--footer-background);
+    
+}
+
+&.navLinks:hover:after {
+  width: 100%;
+  transition: width 0.3s linear;
+}
+
+@media only screen and (max-width: 768px) {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  color: var(--text-color);
+}
 `;

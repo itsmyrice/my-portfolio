@@ -48,6 +48,10 @@ const StyledTitle = styled.h3`
 letter-spacing: 0.1rem;
 font-size: 1.8rem;
 font-weight: 700;
+
+@media screen and (max-width: 768px) {
+  font-size: 1.6rem;
+ }
 `;
 
 const StyledSkillLists = styled.ul`
@@ -66,6 +70,10 @@ border-radius: 10rem;
 font-size: 1.3rem;
 font-weight: 400;
 padding: 0.3rem 1.4rem;
+
+@media screen and (max-width: 768px) {
+  font-size: 1.1rem;
+ }
 `;
 
 const StyledLinkWrapper = styled.div`
@@ -73,8 +81,6 @@ width: 100%;
 margin-top: 1rem;
 display: flex;
 justify-content: center;
-
-
 `;
 
 const StyledLink = styled.a`

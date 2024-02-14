@@ -16,11 +16,6 @@ export default function Footer() {
                 ))}
             </StyledSocials>   
         </StyledWrapper>
-        <StyledArrowWrapper>
-            <a href="/">
-                <StyledArrowImage src={topArrow} alt="Top arrow" />
-            </a>
-        </StyledArrowWrapper>
     </StyledContainer>
   );
 }
@@ -28,8 +23,8 @@ export default function Footer() {
 const StyledContainer = styled.footer`
 width: 100%;
 height: 10vh;
-background-color: #1A1110;
-color: #C0C0C0;
+background-color: var(--footer-background);
+color: var(--text-color2);
 `;
 
 const StyledWrapper = styled.div`
@@ -59,26 +54,4 @@ gap: 2rem;
 
 const StyledImage = styled.img`
 width: 1.6rem;
-
-`;
-
-const StyledArrowWrapper = styled.div`
-bottom: 12%;
-right: 3%;
-position: fixed;
-&:has(StyledArrowImage:hover)
-
-`;
-
-const StyledArrowImage = styled.img`
-max-width: 3.5rem;
-max-height: 3rem;
-transition: filter 300ms;
-&:not(:hover) {
-    filter: brightness(60%);
-}
-
-@media screen and (max-width: 768px) {
-display: none;
-}
 `;
