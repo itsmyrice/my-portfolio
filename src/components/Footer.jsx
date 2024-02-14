@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { socialsData } from "../data/socialsData";
-import topArrow from "../assets/navbar/top-arrow.png"
 
 export default function Footer() {
   return (
