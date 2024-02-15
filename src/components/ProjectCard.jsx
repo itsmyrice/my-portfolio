@@ -29,7 +29,7 @@ padding: 1rem;
 width: 25rem;
 
 @media screen and (max-width: 768px) {
-    max-width: 15rem;
+    max-width: 20rem;
 }
 `;
 
@@ -39,7 +39,7 @@ width: 22.8rem;
 height: 14rem;
 
 @media screen and (max-width: 768px) {
-    max-width: 12rem;
+    max-width: 18rem;
     max-height: 10rem;
 }
 `;

@@ -37,6 +37,10 @@ export default createGlobalStyle`
     --blur-color: rgba(233, 116, 81, 0.2);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     scroll-behavior: smooth;
     min-height: 100vh;

@@ -15,7 +15,7 @@ function displayMenu () {
          <StyledMenuItems ref={navRef}>
          <StyledListItems>
           <StyledLink href="/">
-            <img src={nameLogo} alt="Logo" width={85} height={65} />
+            <StyledImage src={nameLogo} alt="Logo" width={85} height={65} />
             </StyledLink>
           </StyledListItems>
           <StyledListItems>
@@ -70,7 +70,7 @@ align-items: center;
   align-items: center;
  gap: 1rem;
   z-index: 10;
- background-color: rgba(255, 255, 255, 0.1);
+ background-color: rgba(241, 236, 226, 0.8);
  backdrop-filter: blur(10px);
 box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
 transition: 1s;
@@ -110,9 +110,7 @@ row-gap: 2rem;
 justify-content: flex-start;
 margin-left: 0;
 margin-top: 0;
-margin-bottom: 2.5rem;
-height: 2rem;
-}
+margin-bottom: 1.5rem;
 }
 `;
 
@@ -166,6 +164,14 @@ font-size: 1.4rem;
 @media only screen and (max-width: 768px) {
   font-size: 1.2rem;
   padding: 0.4rem;
-  color: var(--text-color);
+  color: var(--footer-background);
+}
+`;
+
+const StyledImage = styled.img`
+
+@media only screen and (max-width: 768px) {
+  width: 3.2rem;
+  height: 3.2rem;
 }
 `;

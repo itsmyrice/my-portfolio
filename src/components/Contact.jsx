@@ -28,72 +28,81 @@ export default function Contact() {
 
   return (
     <StyledContainer id="contact">
-     <StyledFormWrapper>
+     <StyledContactWrapper>
       <StyledFormLeft>
-        <div>
-            <StyledTitle>Contact</StyledTitle>
-            <StyledDescription>Feel free to reach out!</StyledDescription>
-            <StyledDescription>Currently exploring new career opportunities and would be grateful if you could take a moment to review my <StyledCvLink href="https://app.enhancv.com/share/57922f9e/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic" target="_blank" rel="noopener noreferrer">CV</StyledCvLink> for further insights.</StyledDescription>
-        </div>
-
-        <StyledContactWrapper>
+        <StyledTitle>Contact</StyledTitle>
+            <StyledTexts>Feel free to reach out!</StyledTexts>
+            <StyledTexts>Currently exploring new career opportunities and would be grateful if you could take a moment to review my <StyledCvLink href="https://app.enhancv.com/share/57922f9e/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic" target="_blank" rel="noopener noreferrer">CV</StyledCvLink> for further insights.</StyledTexts>
+        <StyledContactInfos>
             {contacsData.map((contact, name) => (
-                <StyledContact key={name}>
-            <StyledContactImage src={contact.imageSrc} alt={contact.name} /> 
+                <StyledContacts key={name}>
+            <img src={contact.imageSrc} alt={contact.name} width={16} height={16} /> 
             {contact.name}  
-            </StyledContact>
+            </StyledContacts>
             ))}
-        </StyledContactWrapper>
+        </StyledContactInfos>
       </StyledFormLeft>
-        <StyledContactForm ref={form} onSubmit={sendEmail}>          
+      <StyledFormRight>
+        <form ref={form} onSubmit={sendEmail}>          
             <StyledInput type="text" placeholder="Your Name" name="user_name" required />
             <StyledInput type="email" placeholder="Your Email" name="user_email" required />
             <StyledTextarea placeholder="Your Message" name="message" required ></StyledTextarea>
             <StyledButton type="submit">Send Message</StyledButton>
-        </StyledContactForm>
-     </StyledFormWrapper>
+        </form>
+        </StyledFormRight>
+     </StyledContactWrapper>
     </StyledContainer>
   )
 };
 
 const StyledContainer = styled.section`
-width: 80%;
+margin: 10% 0;
 display: flex;
+flex-direction: row;
 justify-content: center;
-border-radius: 1rem;
-margin: 10% 10%;
-z-index: 1;
+align-items: center;
 `;
 
-const StyledFormWrapper = styled.div`
-width: 80%;
-/* background-color: #C0C0C0; */
+const StyledContactWrapper = styled.div`
+width: 100%;
+max-width: 60%;
 background-color: rgba(241, 236, 226, 0.85);
 display: flex;
 flex-direction: row;
+justify-content: center;
 align-items: center;
-justify-content: space-evenly;
+column-gap: 1.5rem;
 border-radius: 1rem;
 box-shadow: 0 2rem 6rem rgba(6, 12, 15, 0.2);
 padding: 4rem;
-column-gap: 2rem;
 color: var(--footer-background);
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
-    font-size: 1rem;
+    padding: 4rem 2rem;
+    max-width: 30rem;
+}
+
+@media screen and (max-width: 485px) {
+    width: 100%;
+    max-width: 20rem;
+    padding: 2rem 2rem;
 }
 `;
 
 const StyledFormLeft = styled.div`
-width: 40%;
+width: 100%;
 display: flex;
 flex-direction: column;
-align-items: center;
+justify-content: flex-start;
 row-gap: 1rem;
+
+@media screen and (max-width: 800px) {
+    max-width: 100%;
+}
 `;
 
 const StyledTitle = styled.h2`
@@ -102,19 +111,12 @@ font-weight: 700;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
 
-@media screen and (max-width: 768px) {
-   font-size: 2.2rem;
+@media screen and (max-width: 800px) {
+    font-size: 2.2rem;
 }
 `;
-
-const StyledDescription = styled.p`
-margin: 1rem 0;
-font-size: 1.1rem;
-
-@media screen and (max-width: 768px) {
-    font-size: 1rem;
-}
-
+const StyledTexts = styled.p`
+font-size: 1.2rem;
 `;
 
 const StyledCvLink = styled.a`
@@ -122,59 +124,53 @@ color: var(--footer-background);
 font-weight: 600;
 `;
 
-const StyledContactWrapper = styled.ul`
-/* width: 100%; */
-height: 10rem;
-border: none;
-list-style: none;
+const StyledContactInfos = styled.div`
 display: flex;
 flex-direction: column;
-gap: 1rem;
-}
-`;
-    
-const StyledContact = styled.li`
-display: flex;
-column-gap: 0.5rem;
-font-size: 1.1rem;
+align-items: center;
+gap: 0.5rem;
 
-@media screen and (max-width: 768px) {
-    font-size: 1rem;
+@media screen and (max-width: 800px) {
 
     &:last-child {
-    border-bottom: 1px solid #635147;
-    padding-bottom: 2rem;
+        border-bottom: 1px solid #635147;
+        padding-bottom: 2rem;
     }
 }
 `;
 
-const StyledContactImage = styled.img`
-width: 1rem;
-height: 1rem;
+const StyledContacts = styled.p`
+font-size: 1.2rem;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 0.5rem;
 `;
 
-const StyledContactForm = styled.form`
-width: 40%;
+const StyledFormRight = styled.div`
+width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-between;
-gap: 1rem;
+font-size: 1.3rem;
 
-@media screen and (max-width: 768px) {
-    width: 80%;
-    font-size: 1rem;
+@media screen and (max-width: 800px) {
+    max-width: 100%;
 }
 `;
 
 const StyledInput = styled.input`
-width: 90%;
-height: 2.2rem;
+min-width: 100%;
+margin: 0.5rem 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+height: 2rem;
 border: none;
-border-bottom: 0.2rem solid #635147;
-font-size: 1rem;
 color: var(--footer-background);
 background-color: transparent;
+border-bottom: 0.2rem solid #635147;
 outline: none;
 
 &::placeholder {
@@ -187,12 +183,18 @@ color: #635147;
 border: none;
 box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.10);
 }
+
+@media screen and (max-width: 800px) {
+   
+    &:first-child {
+    margin-top: 2rem;
+    }
+}
 `;
 
-
 const StyledTextarea = styled.textarea`
+min-width: 100%;
 resize: none;
-width: 90%;
 height: 7rem;
 border: none;
 border-bottom: 0.2rem solid #635147;
@@ -214,7 +216,8 @@ box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.10);
 `;
 
 const StyledButton = styled.button`
-width: 90%;
+min-width: 100%;
+margin: 0.5rem 0;
 height: 2.7rem;
 background-color: var(--footer-background);
 border: none;
