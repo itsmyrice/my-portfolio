@@ -93,7 +93,7 @@ list-style: none;
 display: flex;
 flex-direction: row;
 align-items: center;
-background-image: linear-gradient(90deg, rgba(248, 249, 250, 0.3) 0%, rgba(255, 127, 80, 0) 110%);
+background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(217, 144, 88, 0.7) 150%);
 border-radius: 1.2rem;
 background-size: 0 100%;
 background-repeat: no-repeat;

@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 
 export const StyledBackgroundTop = styled.div`
-background: rgba(217, 144, 88, 0.20);
+/* background: rgba(217, 144, 88, 0.20); */
+background: rgba(172, 225, 175, 0.40);
 border-radius: 50%;
 width: 60vw;
 height: 50vw;
@@ -17,7 +18,7 @@ z-index: 0;
 `;
 
 export const StyledBackgroundBottom = styled.div`
-background: rgba(172, 225, 175, 0.20);
+background: rgba(172, 225, 175, 0.40);
 border-radius: 50%;
 width: 50vw;
 height: 45vw;
@@ -45,11 +46,12 @@ export default createGlobalStyle`
     --font-roboto: "Roboto";
   
     /* Default colors */
-    --toggle-background-color: rgba(53, 53, 53, 0.24);
+    /* --toggle-background-color: rgba(53, 53, 53, 0.85); */
+    --toggle-background-color: rgba(240, 255, 240, 0.86);
     --toggle-text-color: #111111;
     --toggle-contact-color: #79443B;
     --footer-background: rgba(123, 160, 91, 0.85);
-    --button-color: rgba(217, 144, 88, 0.8); //#D99058;
+    --button-color: rgba(217, 144, 88, 0.7); //#D99058;
     --blur-color: rgba(233, 116, 81, 0.2);
 }
 

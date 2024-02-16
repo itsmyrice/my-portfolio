@@ -68,7 +68,7 @@ align-items: center;
 const StyledContactWrapper = styled.div`
 width: 100%;
 max-width: 60%;
-background-color: rgba(248, 249, 250, 0.78);
+background-color: #FFFFFF;
 display: flex;
 flex-direction: row;
 justify-content: center;

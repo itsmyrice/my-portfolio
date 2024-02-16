@@ -42,7 +42,8 @@ function displayMenu () {
 
 
 const StyledNav = styled.nav`
-background-color: rgb(248, 249, 250);
+/* background-color: rgb(248, 249, 250); */
+background-color: #FFFFFF;
 box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 position: fixed;
 width: 100%;

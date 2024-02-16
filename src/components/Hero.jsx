@@ -50,7 +50,7 @@ font-family: var(--font-roboto);
 font-size: 3.3rem;
 font-weight: 900;
 letter-spacing: 0.1rem;
-background: linear-gradient(90deg, rgba(17, 17, 17, 1) 65%, rgba(217, 144, 88, 0.7) 120% );
+background: linear-gradient(90deg, rgba(17, 17, 17, 1) 65%, rgba(123, 160, 91, 0.6) 120% );
 -webkit-text-fill-color: transparent;
 -webkit-background-clip: text;
 
