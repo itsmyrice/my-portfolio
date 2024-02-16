@@ -33,7 +33,7 @@ export default function About() {
 };
 
 const StyledContainer = styled.section`
-background-color: rgba(107, 68, 35, 0.8);
+background-color: rgba(217, 144, 88, 0.62);
 border-radius: 1rem;
 margin-top: 7.5rem;
 margin: 0 10%;
@@ -59,7 +59,6 @@ align-items: center;
 `;
 
 const StyledTitle = styled.h2`
-color: var(--text-color);
 font-size: 2.2rem;
 font-weight: 700;
 margin-bottom: 2rem;
@@ -94,7 +93,7 @@ list-style: none;
 display: flex;
 flex-direction: row;
 align-items: center;
-background-image: linear-gradient(90deg, rgba(146, 102, 68, 0.42) 0%, rgba(107, 68, 35, 0) 100%);
+background-image: linear-gradient(90deg, rgba(248, 249, 250, 0.3) 0%, rgba(255, 127, 80, 0) 110%);
 border-radius: 1.2rem;
 background-size: 0 100%;
 background-repeat: no-repeat;

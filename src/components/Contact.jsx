@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { contacsData } from "../data/contactsData";
 import emailjs from '@emailjs/browser';
+import { StyledBackgroundBottom } from "../styles";
 
 
 export default function Contact() {
@@ -51,6 +52,7 @@ export default function Contact() {
         </form>
         </StyledFormRight>
      </StyledContactWrapper>
+     <StyledBackgroundBottom />
     </StyledContainer>
   )
 };
@@ -66,16 +68,16 @@ align-items: center;
 const StyledContactWrapper = styled.div`
 width: 100%;
 max-width: 60%;
-background-color: rgba(241, 236, 226, 0.85);
+background-color: rgba(248, 249, 250, 0.78);
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 column-gap: 1.5rem;
 border-radius: 1rem;
-box-shadow: 0 2rem 6rem rgba(6, 12, 15, 0.2);
+box-shadow: 0 0 9px 5px rgba(17, 17, 17, 0.15);
 padding: 4rem;
-color: var(--footer-background);
+z-index: 1;
 
 @media screen and (max-width: 800px) {
     width: 100%;
@@ -98,7 +100,7 @@ width: 100%;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-row-gap: 1rem;
+row-gap: 1.5rem;
 
 @media screen and (max-width: 800px) {
     max-width: 100%;
@@ -128,12 +130,12 @@ const StyledContactInfos = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 0.5rem;
+gap: 0.7rem;
 
 @media screen and (max-width: 800px) {
 
     &:last-child {
-        border-bottom: 1px solid #635147;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.35);
         padding-bottom: 2rem;
     }
 }
@@ -166,17 +168,16 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
-height: 2rem;
+height: 2.1rem;
 border: none;
-color: var(--footer-background);
+
 background-color: transparent;
-border-bottom: 0.2rem solid #635147;
+border-bottom: 0.2rem solid rgba(123, 160, 91, 0.32);
 outline: none;
 
 &::placeholder {
 text-transform: uppercase;
 font-size: 1rem;
-color: #635147;
 }
 
 &:focus {
@@ -197,16 +198,14 @@ min-width: 100%;
 resize: none;
 height: 7rem;
 border: none;
-border-bottom: 0.2rem solid #635147;
+border-bottom: 0.2rem solid rgba(123, 160, 91, 0.32);
 font-size: 1rem;
-color: var(--footer-background);
 background-color: transparent;
 outline: none;
 
 &::placeholder {
 text-transform: uppercase;
 font-size: 1rem;
-color: #635147;
 }
 
 &:focus {
@@ -219,11 +218,10 @@ const StyledButton = styled.button`
 min-width: 100%;
 margin: 0.5rem 0;
 height: 2.7rem;
-background-color: var(--footer-background);
+background-color: rgba(123, 160, 91, 0.67);
 border: none;
 border-radius: 1rem;
 font-size: 1rem;
-color: var(--text-color);
 text-transform: uppercase;
 cursor: pointer;
 box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.10);

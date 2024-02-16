@@ -36,22 +36,18 @@ function displayMenu () {
           <MdMenu/>
           </StyledButtonShow>
     </StyledNav>
-
   )
 
 };
 
 
 const StyledNav = styled.nav`
-background-color: var(--text-color);
+background-color: rgb(248, 249, 250);
 box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-color: var(--footer-background);
 position: fixed;
 width: 100%;
 height: 3.5rem;
-
 z-index: 5;
-
 `;
 
 const StyledMenuItems = styled.ul`
@@ -70,7 +66,7 @@ align-items: center;
   align-items: center;
  gap: 1rem;
   z-index: 10;
- background-color: rgba(241, 236, 226, 0.8);
+  background-color: rgba(248, 249, 250, 0.8);
  backdrop-filter: blur(10px);
 box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
 transition: 1s;
@@ -89,12 +85,12 @@ padding: 0 2%;
 &:first-child {
   margin-right: auto;
   margin-left: 2%;
- height: 2.5rem;
+  height: 2.5rem;
 }
 
 &:first-child:hover {
   background-color: transparent;
-  filter: hue-rotate(10deg);
+  filter: hue-rotate(62deg);
 }
 
 @media only screen and (max-width: 768px) {
@@ -112,6 +108,7 @@ margin-left: 0;
 margin-top: 0;
 margin-bottom: 1.5rem;
 }
+}
 `;
 
 const StyledButtonShow = styled.button`
@@ -124,7 +121,6 @@ color: black;
 visibility: hidden;
 opacity: 0;
 font-size: 2.3rem;
-
 
 @media only screen and (max-width: 768px) {
   &.navMenu {
@@ -143,7 +139,6 @@ font-size: 2.3rem;
 
 const StyledLink = styled.a`
 text-decoration: none;
-color: black;
 font-size: 1.4rem;
 
 &.navLinks:after {
@@ -152,7 +147,7 @@ font-size: 1.4rem;
   margin: auto;
   width: 0;
   height: 3px;
-   background: var(--footer-background);
+   background: rgba(123, 160, 91, 0.80);
     
 }
 
@@ -164,7 +159,6 @@ font-size: 1.4rem;
 @media only screen and (max-width: 768px) {
   font-size: 1.2rem;
   padding: 0.4rem;
-  color: var(--footer-background);
 }
 `;
 

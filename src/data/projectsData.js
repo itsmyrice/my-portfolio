@@ -10,17 +10,20 @@ export const projectsData = [
     skills: ["HTML5", "CSS", "JavaScript", "React", "Next.js", "MongoDB"],
     imageSrc: gamedalf,
     link: "https://gamedalf.vercel.app",
+    rank: "01",
   },
   {
     title: "Rick and Morty",
     skills: ["HTML5", "CSS", "JavaScript", "React"],
     imageSrc: rickAndMorty,
     link: "https://rick-and-morty-by-gm.vercel.app",
+    rank: "02",
   },
   {
     title: "Music Collection",
     skills: ["HTML5", "CSS", "JavaScript", "React"],
     imageSrc: musicCollection,
     link: "https://gloryann-music-collection.vercel.app",
+    rank: "03",
   }
 ];

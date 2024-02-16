@@ -22,8 +22,9 @@ export default function App() {
 };
 
 const StyledDiv = styled.div`
-background-color: var(--background-color);
+background-color: var(--toggle-background-color); 
  width: 100%;
  height: 100%;
  overflow: hidden;
+ color: var(--toggle-text-color);
 `;

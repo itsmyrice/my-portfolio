@@ -9,9 +9,9 @@ export default function Footer() {
             <StyledSocials>
                 <StyledText>&copy; 2024 Glory Ann Conwi</StyledText>
                 {socialsData.map((social, name) => (
-                    <li key={name}>
-                    <a href={social.link} target="_blank" rel="noopener noreferrer"><img src={social.imageSrc} alt={social.name} width={23}/></a>                   
-                </li>
+                    <SytledIcon key={name}>
+                    <a href={social.link} target="_blank" rel="noopener noreferrer">{social.imageSrc}</a>                   
+                </SytledIcon>
                 ))}
             </StyledSocials>   
         </StyledWrapper>
@@ -56,4 +56,8 @@ left: 10%;
 @media screen and (max-width: 420px) {
    position: static;
 }
+`;
+
+const SytledIcon = styled.li`
+font-size: 1.5rem;
 `;

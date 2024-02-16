@@ -23,17 +23,17 @@ export default function Try() {
 };
 
 const StyledContainer = styled.section`
-color: var(--text-color);
 margin: 4rem 0 0 0;
+z-index: 1;
 `;
 
 const StyledTitle = styled.h2`
-color: var(--text-color);
 font-size: 2.2rem;
 font-weight: 700;
 margin: 8rem 10% 2rem;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
+z-index: 1;
 
 @media screen and (max-width: 768px) {
   font-size: 2.2rem;
@@ -58,6 +58,7 @@ width: 80%;
 display: inline-flex;
 flex-wrap: wrap;
 row-gap: 1rem;
+z-index: 1;
 
 @media screen and (max-width: 768px) {
     width: 100%;
@@ -74,7 +75,7 @@ align-items: center;
 `;
 
 const StyledImageContainer = styled.div`
-background-color: var(--light-dark-color);
+background-color: rgba(123, 160, 91, 0.67);
 border-radius: 100%;
 width: 10rem;
 height: 10rem;
@@ -84,7 +85,7 @@ justify-content: center;
 align-items: center;
 transition: filter 100ms;
 &:not(:hover) {
-  filter: brightness(62%);
+  filter: brightness(70%);
 }
 `;
 
