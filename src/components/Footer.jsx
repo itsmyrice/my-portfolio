@@ -20,6 +20,7 @@ export default function Footer() {
 }
 
 const StyledContainer = styled.footer`
+margin-top: 6rem;
 width: 100%;
 height: 10vh;
 background-color: var(--footer-background);

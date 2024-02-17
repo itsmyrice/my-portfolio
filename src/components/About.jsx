@@ -33,19 +33,14 @@ export default function About() {
 };
 
 const StyledContainer = styled.section`
-background-color: rgba(217, 144, 88, 0.62);
+background-color: var(--sectioon-background-color);
 border-radius: 1rem;
-margin-top: 7.5rem;
-margin: 0 10%;
 padding: 4rem;
 position: relative;
 z-index: 1;
 
 @media screen and (max-width: 768px) {
-background-color: transparent;
-padding-left: 0;
-padding-right: 0;
-}
+padding: 2rem;
 `;
 
 const StyledContent = styled.div`
@@ -61,7 +56,7 @@ align-items: center;
 const StyledTitle = styled.h2`
 font-size: 2.2rem;
 font-weight: 700;
-margin-bottom: 2rem;
+margin: 0 10% 2rem 10% ;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
 
@@ -72,9 +67,9 @@ text-transform: uppercase;
 
 const StyledGirlImage = styled.img`
 padding-right: 1.5rem;
-width: 50%;
+width: 40%;
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 815px) {
     display: none;
 }
 `;
@@ -84,7 +79,6 @@ color: var(--text-color);
 display: flex;
 flex-direction: column;
 gap: 2.5rem;
-
 `;
 
 const StyledListItems = styled.li`
@@ -93,7 +87,7 @@ list-style: none;
 display: flex;
 flex-direction: row;
 align-items: center;
-background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(217, 144, 88, 0.7) 150%);
+background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 131, 121, 0.62) 140%);
 border-radius: 1.2rem;
 background-size: 0 100%;
 background-repeat: no-repeat;

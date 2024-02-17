@@ -23,7 +23,7 @@ export default function Try() {
 };
 
 const StyledContainer = styled.section`
-margin: 4rem 0 0 0;
+margin: 0 0 6rem 0;
 z-index: 1;
 `;
 
@@ -75,7 +75,7 @@ align-items: center;
 `;
 
 const StyledImageContainer = styled.div`
-background-color: rgba(123, 160, 91, 0.67);
+background-color: rgba(142, 195, 176, 0.65);
 border-radius: 100%;
 width: 10rem;
 height: 10rem;

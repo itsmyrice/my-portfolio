@@ -18,7 +18,7 @@ export default function Hero() {
 };
 
 const StyledContainer = styled.section`
-margin: 8rem 10% 2rem 10%;
+margin: 8rem 10% 4rem 10%;
 display: flex;
 position: relative;
 align-items: center;
@@ -50,7 +50,7 @@ font-family: var(--font-roboto);
 font-size: 3.3rem;
 font-weight: 900;
 letter-spacing: 0.1rem;
-background: linear-gradient(90deg, rgba(17, 17, 17, 1) 65%, rgba(123, 160, 91, 0.6) 120% );
+background: linear-gradient(90deg, rgba(17, 17, 17, 1) 65%, rgba(142, 195, 176, 0.7) 130% );
 -webkit-text-fill-color: transparent;
 -webkit-background-clip: text;
 
@@ -60,13 +60,13 @@ background: linear-gradient(90deg, rgba(17, 17, 17, 1) 65%, rgba(123, 160, 91, 0
 `;
 
 const StyledDescription = styled.p`
-margin: 2rem 10rem 4rem 0;
+margin: 2rem 6rem 4rem 0;
 font-family: var(--font-roboto);
 font-size: 1.5rem;
 letter-spacing: 1px;
 
 @media screen and (max-width: 768px) {
-margin: 1rem 0 3rem;
+margin: 1rem 0 3rem 1rem;
 font-size: 1.3rem;
 }
 `;
@@ -88,8 +88,8 @@ text-decoration: none;
 
 const StyledHeroImage = styled.img`
 border-radius: 50%;
-width: 23rem;
-height: 22rem;
+width: 22rem;
+height: 21rem;
 z-index: 1;
 
 animation-name: floating;

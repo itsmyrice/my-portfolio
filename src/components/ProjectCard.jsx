@@ -20,7 +20,7 @@ export default function ProjectCard({ project : { title, skills, imageSrc, link,
 }
 
 const StyledContainer = styled.section`
-background: linear-gradient(180deg, rgba(217, 144, 88, 0.74) 0%, rgba(255, 127, 80, 0) 140%);
+background: linear-gradient(180deg, rgba(248, 131, 121, 0.52) 0%, rgba(255, 255, 255, 0) 115%);
 box-shadow: 0 0 9px 5px rgba(17, 17, 17, 0.15);
 border-radius: 1rem;
 display: flex;
@@ -59,12 +59,13 @@ const StyledImageText = styled.span`
   top: 3%;
   left: 5%;
   z-index: 10;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
 
   @media screen and (max-width: 485px) {
-    top: 5%;
-    left: 10%;
+    top: 4%;
+    left: 8%;
+    font-size: 1.3rem;
 }
 `;
 
@@ -85,12 +86,12 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 flex-wrap: wrap;
-gap: 0.5rem;
+gap: 1rem;
 list-style: none;
 `;
 
 const StyledSkill = styled.li`
-background-color: rgba(237, 201, 175, 0.56);
+background-color: rgba(248, 131, 121, 0.18);
 border-radius: 10rem;
 font-size: 1.3rem;
 font-weight: 400;

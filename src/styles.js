@@ -3,30 +3,25 @@ import styled from "styled-components";
 
 
 export const StyledBackgroundTop = styled.div`
-/* background: rgba(217, 144, 88, 0.20); */
-background: rgba(172, 225, 175, 0.40);
-border-radius: 50%;
-width: 60vw;
-height: 50vw;
-/* min-width: 4rem;
-min-height: 5rem; */
+background: rgba(142, 195, 176, 0.38);
+border-radius: 25%;
+width: 60%;
+height: 80%;
 position: absolute;
-top: 8rem;
-left: -10vw;
+top: 6rem;
+left: -2vw;
 filter: blur(10rem);
 z-index: 0;
 `;
 
 export const StyledBackgroundBottom = styled.div`
-background: rgba(172, 225, 175, 0.40);
-border-radius: 50%;
-width: 50vw;
-height: 45vw;
-/* min-width: 4rem;
-min-height: 5rem; */
+background: rgba(142, 195, 176, 0.35);
+border-radius: 25%;
+width: 70%;
+height: 80%;
 position: absolute;
 bottom: 100;
-right: 0;
+right: 10;
 filter: blur(10rem);
 z-index: 0;
 
@@ -46,12 +41,12 @@ export default createGlobalStyle`
     --font-roboto: "Roboto";
   
     /* Default colors */
-    /* --toggle-background-color: rgba(53, 53, 53, 0.85); */
-    --toggle-background-color: rgba(240, 255, 240, 0.86);
+    --toggle-background-color: rgba(158, 213, 197, 0.19);
     --toggle-text-color: #111111;
     --toggle-contact-color: #79443B;
-    --footer-background: rgba(123, 160, 91, 0.85);
-    --button-color: rgba(217, 144, 88, 0.7); //#D99058;
+    --footer-background: rgba(143, 195, 176, 0.95);
+    --button-color: rgba(248, 131, 121, 0.68); // #F88379;
+    --sectioon-background-color: rgba(255, 255, 255, 0.76);
     --blur-color: rgba(233, 116, 81, 0.2);
 }
 

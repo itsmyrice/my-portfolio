@@ -18,12 +18,18 @@ export default function Projects() {
 };
 
 const StyledContainer = styled.section`
+background-color: var(--sectioon-background-color);
 color: var(--text-color);
-margin: 4rem 10% 0;
+margin-top: 5rem;
+margin: 0 0 6rem 0;
+padding: 4rem;
+
+@media screen and (max-width: 768px) {
+padding: 2rem;
 `;
 
 const StyledTitle = styled.h2`
-margin: 8rem 0 4rem;
+margin: 0 10% 2rem 10%;
 font-size: 2.2rem;
 font-weight: 700;
 letter-spacing: 0.1rem;

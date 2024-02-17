@@ -15,7 +15,7 @@ function displayMenu () {
          <StyledMenuItems ref={navRef}>
          <StyledListItems>
           <StyledLink href="/">
-            <StyledImage src={nameLogo} alt="Logo" width={85} height={65} />
+            <StyledImage src={nameLogo} alt="Logo" width={100} height={70} />
             </StyledLink>
           </StyledListItems>
           <StyledListItems>
@@ -42,12 +42,11 @@ function displayMenu () {
 
 
 const StyledNav = styled.nav`
-/* background-color: rgb(248, 249, 250); */
 background-color: #FFFFFF;
 box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 position: fixed;
 width: 100%;
-height: 3.5rem;
+height: 3.7rem;
 z-index: 5;
 `;
 
@@ -68,7 +67,7 @@ align-items: center;
  gap: 1rem;
   z-index: 10;
   background-color: rgba(248, 249, 250, 0.8);
- backdrop-filter: blur(10px);
+ backdrop-filter: blur(11px);
 box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
 transition: 1s;
 transform: translateY(-100vh);
@@ -81,9 +80,10 @@ transform: translateY(-100vh);
 `;
 
 const StyledListItems = styled.li`
-padding: 0 2%;
+padding: 0.5rem 2% 0 2%;
 
 &:first-child {
+  padding: 0 2% 0 2%;
   margin-right: auto;
   margin-left: 2%;
   height: 2.5rem;
@@ -91,7 +91,7 @@ padding: 0 2%;
 
 &:first-child:hover {
   background-color: transparent;
-  filter: hue-rotate(62deg);
+  filter: hue-rotate(141deg);
 }
 
 @media only screen and (max-width: 768px) {
@@ -118,7 +118,7 @@ background: transparent;
 padding-right: 0.7rem;
 border: none;
 outline: none;
-color: black;
+color: var(--toggle-text-color);
 visibility: hidden;
 opacity: 0;
 font-size: 2.3rem;
@@ -148,7 +148,7 @@ font-size: 1.4rem;
   margin: auto;
   width: 0;
   height: 3px;
-   background: rgba(123, 160, 91, 0.80);
+   background: rgba(142, 195, 176, 0.85);
     
 }
 
@@ -166,7 +166,7 @@ font-size: 1.4rem;
 const StyledImage = styled.img`
 
 @media only screen and (max-width: 768px) {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 4.3rem;
+  height: 3.5rem;
 }
 `;

@@ -172,7 +172,7 @@ height: 2.1rem;
 border: none;
 
 background-color: transparent;
-border-bottom: 0.2rem solid rgba(123, 160, 91, 0.32);
+border-bottom: 0.2rem solid rgba(142, 195, 176, 0.32);
 outline: none;
 
 &::placeholder {
@@ -198,7 +198,7 @@ min-width: 100%;
 resize: none;
 height: 7rem;
 border: none;
-border-bottom: 0.2rem solid rgba(123, 160, 91, 0.32);
+border-bottom: 0.2rem solid rgba(142, 195, 176, 0.32);
 font-size: 1rem;
 background-color: transparent;
 outline: none;
@@ -218,7 +218,7 @@ const StyledButton = styled.button`
 min-width: 100%;
 margin: 0.5rem 0;
 height: 2.7rem;
-background-color: rgba(123, 160, 91, 0.67);
+background-color: rgba(142, 195, 176, 0.69);
 border: none;
 border-radius: 1rem;
 font-size: 1rem;
