@@ -20,8 +20,7 @@ export default function Projects() {
 const StyledContainer = styled.section`
 background-color: var(--sectioon-background-color);
 color: var(--text-color);
-margin-top: 5rem;
-margin: 0 0 6rem 0;
+margin: 4rem 0;
 padding: 4rem;
 
 @media screen and (max-width: 768px) {
@@ -29,7 +28,7 @@ padding: 2rem;
 `;
 
 const StyledTitle = styled.h2`
-margin: 0 10% 2rem 10%;
+margin: 0 10% 2rem;
 font-size: 2.2rem;
 font-weight: 700;
 letter-spacing: 0.1rem;
@@ -37,6 +36,7 @@ text-transform: uppercase;
 
 @media screen and (max-width: 768px) {
   font-size: 2.2rem;
+  margin: 2rem 0;
  }
 `;
 

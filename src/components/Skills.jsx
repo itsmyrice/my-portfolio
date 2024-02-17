@@ -23,20 +23,22 @@ export default function Try() {
 };
 
 const StyledContainer = styled.section`
-margin: 0 0 6rem 0;
+margin: 4rem 0;
 z-index: 1;
+padding: 0 2rem;
 `;
 
 const StyledTitle = styled.h2`
 font-size: 2.2rem;
 font-weight: 700;
-margin: 8rem 10% 2rem;
+margin: 0 10% 2rem;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
 z-index: 1;
 
 @media screen and (max-width: 768px) {
   font-size: 2.2rem;
+  margin: 2rem 0;
  }
 
 `;

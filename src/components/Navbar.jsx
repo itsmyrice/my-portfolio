@@ -67,7 +67,7 @@ align-items: center;
  gap: 1rem;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.78);
- backdrop-filter: blur(15px);
+ backdrop-filter: blur(17px);
 box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
 transition: 1s;
 transform: translateY(-100vh);

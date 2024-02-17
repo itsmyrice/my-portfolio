@@ -56,12 +56,13 @@ align-items: center;
 const StyledTitle = styled.h2`
 font-size: 2.2rem;
 font-weight: 700;
-margin: 0 10% 2rem 10% ;
+margin: 0 10% 2rem;
 letter-spacing: 0.1rem;
 text-transform: uppercase;
 
 @media screen and (max-width: 768px) {
  font-size: 2.2rem;
+ margin: 2rem 0;
 }
 `;
 

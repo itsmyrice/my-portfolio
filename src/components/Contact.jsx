@@ -58,7 +58,7 @@ export default function Contact() {
 };
 
 const StyledContainer = styled.section`
-margin: 10% 0;
+margin: 4rem 0;
 display: flex;
 flex-direction: row;
 justify-content: center;
