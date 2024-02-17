@@ -46,7 +46,7 @@ export default createGlobalStyle`
     --toggle-contact-color: #79443B;
     --footer-background: rgba(143, 195, 176, 0.95);
     --button-color: rgba(248, 131, 121, 0.68); // #F88379;
-    --sectioon-background-color: rgba(255, 255, 255, 0.76);
+    --sectioon-background-color: rgba(255, 255, 255, 0.82);
     --blur-color: rgba(233, 116, 81, 0.2);
 }
 

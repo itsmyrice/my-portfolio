@@ -67,7 +67,7 @@ text-transform: uppercase;
 
 const StyledGirlImage = styled.img`
 padding-right: 1.5rem;
-width: 40%;
+width: 35%;
 
 @media screen and (max-width: 815px) {
     display: none;
@@ -104,7 +104,11 @@ background-size: 100% 100%;
 `;
 
 const StyledIcon = styled.img`
-width: 40%;
+width: 20%;
+
+@media screen and (max-width: 768px) {
+    width: 30%;
+}
 `;
 
 const StyledDeveloperTitle = styled.h3`
